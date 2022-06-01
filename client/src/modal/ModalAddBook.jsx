@@ -4,18 +4,15 @@ import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
 
-function Modal_add_book() {
-  const [show, setShow] = useState(false);
+function ModalAddBook(props) {
+  console.log('props',props)
+  const [show, setShow] = useState(props.show);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
     <>
-      <Button variant="success" onClick={handleShow}>
-        Add book
-      </Button>
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
@@ -37,4 +34,4 @@ function Modal_add_book() {
 
 
 
-export default Modal_add_book
+export default ModalAddBook

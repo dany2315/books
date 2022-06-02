@@ -1,22 +1,30 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
 
-function Modal_add_book() {
+function ModalAddBook(props) {
+
+  const [x,setx] = useState(props.IsOpen)
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => setShow(props.IsOpen);
+  useEffect(() => {  
+    {console.log(x)}
+  },)
+  
+
 
   return (
     <>
-      <Button variant="success" onClick={handleShow}>
-        Add book
-      </Button>
-
+            
+            
       <Modal show={show} onHide={handleClose}>
+      
+
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
@@ -37,4 +45,4 @@ function Modal_add_book() {
 
 
 
-export default Modal_add_book
+export default ModalAddBook

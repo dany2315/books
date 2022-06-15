@@ -5,11 +5,6 @@ import Button from 'react-bootstrap/Button';
 
 
 function Book() {
-
-   
-
-
-
     return ( 
         <>
               <Card style={{ width: '17rem' }}>

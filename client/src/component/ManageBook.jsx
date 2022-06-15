@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Button } from "react-bootstrap";
 import ModalAddBook from "../modal/ModalAddBook.jsx";
 
-function Nav() {
+function ManageBook() {
 
     const [isShowModal, setIsShowModal] = useState(false);
 
@@ -35,4 +35,4 @@ function Nav() {
      );
 }
 
-export default Nav;
+export default ManageBook;

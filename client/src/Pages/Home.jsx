@@ -3,14 +3,15 @@ import React from 'react'
 import Book from '../component/book/book';
 import { Container,Row,Col } from 'react-bootstrap';
 import  'bootstrap/dist/css/bootstrap.min.css' ;
-import Nav from '../component/Nav';
+import ManageBook from '../component/ManageBook';
 
 
 export default function Home() {
   return (
     <>
-    <hr></hr>
-    <Nav />
+
+    <h1  style={{textAlign:"center"}}>Manage book</h1>
+    <ManageBook />
     
 
     <Container>
